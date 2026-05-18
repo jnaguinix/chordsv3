@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #070709;
+  --color-panel: #0e0e12;
+  --color-panel2: #13131a;
+  --color-panel3: #18181f;
+  --color-brd: #1e1e28;
+  --color-brd2: #2a2a38;
+  --color-txt: #f0f0f8;
+  --color-mut: #6b6b80;
+  --color-mut2: #9090a8;
+  --color-org: #ff8c57;
+  --color-org2: #ff6020;
+  --color-blu: #5b9dff;
+  --color-grn: #3fd882;
+  --color-pur: #a87fff;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brd2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mut);
+}
+
+/* Base custom styles to enforce uniform look without bloating standard tailwind classes */
+input[type=range].custom-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--color-brd2);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+input[type=range].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-org);
+  cursor: pointer;
+}
+
+/* Piano key active states */
+.key-note {
+  background-color: var(--color-blu) !important;
+  border-color: #3a7de0 !important;
+}
+.key-bass {
+  background-color: var(--color-org) !important;
+  border-color: #c05820 !important;
+}
+.key-both {
+  background-color: var(--color-pur) !important;
+  border-color: #7952c4 !important;
+}
+
+.bg-key-note { background-color: var(--color-blu) !important; }
+.bg-key-bass { background-color: var(--color-org) !important; }
+.bg-key-both { background-color: var(--color-pur) !important; }
